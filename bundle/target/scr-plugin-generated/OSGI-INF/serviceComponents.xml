@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?><components xmlns:scr="http://www.osgi.org/xmlns/scr/v1.0.0">
+    <scr:component enabled="true" name="com.adobe.cq.social.custom.comment.SimpleDSComponent">
+        <implementation class="com.adobe.cq.social.custom.comment.SimpleDSComponent"/>
+        <service servicefactory="false">
+            <provide interface="java.lang.Runnable"/>
+        </service>
+        <property name="service.pid" value="com.adobe.cq.social.custom.comment.SimpleDSComponent"/>
+    </scr:component>
+    <scr:component enabled="true" name="Custom Comment Social Component Factory">
+        <implementation class="com.adobe.cq.social.custom.comment.CustomCommentFactory"/>
+        <service servicefactory="false">
+            <provide interface="com.adobe.cq.social.commons.client.api.SocialComponentFactory"/>
+            <provide interface="com.adobe.cq.social.commons.client.api.SocialCollectionComponentFactory"/>
+        </service>
+        <property name="priority" type="Integer" value="0"/>
+        <property name="service.vendor" value="Adobe Systems Incorporated"/>
+        <property name="service.pid" value="Custom Comment Social Component Factory"/>
+        <reference name="commentListProviderManager" interface="com.adobe.cq.social.commons.comments.listing.CommentSocialComponentListProviderManager" cardinality="1..1" policy="static" bind="bindCommentListProviderManager" unbind="unbindCommentListProviderManager"/>
+        <reference name="listProviderManager" interface="com.adobe.cq.social.commons.comments.listing.CommentSocialComponentListProviderManager" cardinality="1..1" policy="static" bind="bindListProviderManager" unbind="unbindListProviderManager"/>
+        <reference name="xss" interface="com.adobe.granite.xss.XSSAPI" cardinality="1..1" policy="static" bind="bindXss" unbind="unbindXss"/>
+        <reference name="socialUtils" interface="com.adobe.cq.social.ugcbase.SocialUtils" cardinality="1..1" policy="static" bind="bindSocialUtils" unbind="unbindSocialUtils"/>
+        <reference name="clientUtilFactory" interface="com.adobe.cq.social.commons.client.api.ClientUtilityFactory" cardinality="1..1" policy="static" bind="bindClientUtilFactory" unbind="unbindClientUtilFactory"/>
+    </scr:component>
+</components>

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/soco.iml" filepath="$PROJECT_DIR$/soco.iml" />
+      <module fileurl="file://$PROJECT_DIR$/bundle/soco-bundle.iml" filepath="$PROJECT_DIR$/bundle/soco-bundle.iml" />
+      <module fileurl="file://$PROJECT_DIR$/content/soco-content.iml" filepath="$PROJECT_DIR$/content/soco-content.iml" />
+    </modules>
+  </component>
+</project>
+

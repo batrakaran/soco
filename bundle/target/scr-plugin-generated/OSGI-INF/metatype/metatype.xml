@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8"?><metatype:MetaData xmlns:metatype="http://www.osgi.org/xmlns/metatype/v1.0.0" localization="OSGI-INF/metatype/metatype">
+    <OCD id="com.adobe.cq.social.custom.comment.SimpleDSComponent" name="%com.adobe.cq.social.custom.comment.SimpleDSComponent.name" description="%com.adobe.cq.social.custom.comment.SimpleDSComponent.description"/>
+    <Designate pid="com.adobe.cq.social.custom.comment.SimpleDSComponent">
+        <Object ocdref="com.adobe.cq.social.custom.comment.SimpleDSComponent"/>
+    </Designate>
+</metatype:MetaData>
